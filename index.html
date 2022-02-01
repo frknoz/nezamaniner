@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ne Zaman İner</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="speed">Hız Testi</a></li>
+                <li><a id="timeCalc">Zaman Hesapla</a></li>
+                <li><a id="info">Bilgi</a></li>
+                <li><i class="fas fa-sun"></i></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <div id="close"><i class="fas fa-times"></i></div>
+    <iframe id="speedFrame" src="https://nezamaniner.speedtestcustom.com"></iframe>
+
+    <div class="container">
+        <h1>İndirme Zamanı Hesaplayıcı</h1>
+
+        <button class="btn speed">Hız Testi</button>
+        
+        <div class="calculator">
+            <div class="calculator-row">
+                <div class="calculator-div">Dosya Boyutu: 
+                    <input type="number" id="folder-size" class="text" value="">
+                </div>
+                <div class="select-div">
+                    <select id="folder-size-select">
+                        <option value="KB">KB</option>
+                        <option value="MB">MB</option>
+                        <option value="GB" selected>GB</option>
+                        <option value="TB">TB</option>
+                      </select>
+                </div>
+            </div>
+            <div class="calculator-row">
+                <div class="calculator-div">İndirme Hızı: 
+                    <input type="number" id="download-speed" class="text" value="">
+                </div>
+                <div class="select-div">
+                    <select id="download-speed-select">
+                        <option value="Kbps">Kbps</option>
+                        <option value="Mbps" selected>Mbps</option>
+                        <option value="Gbps">Gbps</option>
+                      </select>
+                </div>
+            </div>
+            <div class="calculator-row">
+                    <button id="calculate-btn">Hesapla</button>
+                
+            </div>
+            <div class="calculator-row">
+                <div class="calculator-div" id="result">
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="info-text">
+            <h2>Download Hızı Nedir?</h2>
+            <p>Download, indirmek anlamına gelen İngilizce bir kelimedir. İnternet üzerinden bir film, oyun ya da dosya indirirken download yapmış olursunuz. Download hızı ise indirme hızını ifade eder. Saniyede ne kadar büyüklükte veri indirdiğiniz download hızı ile belirtilir.
+                Download yani indirme hızı internet hızına göre değişkenlik gösterir. İnternetten sürekli dosya indirmek istiyorsanız yüksek download hızına sahip internet paketi kullanmanız gerekecektir. 
+            </p>
+            <h2>Upload Hızı Nedir?</h2>
+            <p>
+                Upload yüklemek anlamına gelen İngilizce bir kelimedir. Download ile bilgisayara ya da telefona veri gelirken, upload ile bilgisayarımızdan karşıya veri gider. Örneğin; WhatsApp üzerinden video ya da mesaj yollarken, Facebook’a fotoğraf yüklerken upload yapmış oluruz.
+                Upload Speed sözcüğünün Türkçe karşılığı “Yükleme Hızı” anlamındadır. Yükleme hızı, internet servis sağlayıcılarının sağlamış olduğu karşı yükleme hızıdır. Upload hızı genellikle download hızına göre daha düşüktür. Upload hızının download hızından daha düşük olmasının nedeni ticari pazarlama stratejisidir. İnternet servis sağlayıcıları, hosting şirketlerine upload hızı yüksek olan bağlantıları daha yüksek fiyatlardan ulaştırmaktadır. Bu bağlantılar simetrik bağlantı olarak tanımlanır.
+            </p>
+            <h1>Dönüşüm Tablosu</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <td>İnternet Hızı</td>
+                        <td>İndirme Hızı</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 Mbps</td>
+                        <td>128 KB</td>
+                    </tr>
+                    <tr>
+                        <td>2 Mbps</td>
+                        <td>256 KB</td>
+                    </tr>
+                    <tr>
+                        <td>4 Mbps</td>
+                        <td>512 KB</td>
+                    </tr>
+                    <tr>
+                        <td>7.2 Mbps</td>
+                        <td>0.9 MB</td>
+                    </tr>
+                    <tr>
+                        <td>8 Mbps</td>
+                        <td>1 MB</td>
+                    </tr>
+                    <tr>
+                        <td>16 Mbps</td>
+                        <td>2 MB</td>
+                    </tr>
+                    <tr>
+                        <td>32 Mbps</td>
+                        <td>4 MB</td>
+                    </tr>
+                    <tr>
+                        <td>50 Mbps</td>
+                        <td>6.25 MB</td>
+                    </tr>
+                    <tr>
+                        <td>56 Mbps</td>
+                        <td>7 MB</td>
+                    </tr>
+                    <tr>
+                        <td>100 Mbps</td>
+                        <td>12.5 MB</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="moveUp"><i class="fas fa-chevron-circle-up"></i></div>
+    <footer>
+        <div><i class="fas fa-copyright"></i> Copyright<a href="https://furkanoz.com/"> FurkanOZ </a>2022 Tüm Hakları Saklıdır.</div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/humanize-duration/3.27.1/humanize-duration.min.js" integrity="sha512-0Bd+9yMPZnNzFL0DAx7t9faxR9Djf2p41RVNAUZIdvG6s9q05Vvl4Dwj+rgRqh2esOq01Lv74VGmLA1mo4Ic+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+    <script src="script.js"></script>
+</body>
+</html>
